@@ -1,0 +1,116 @@
+//Colors
+$mainColor   : #A2A9AF;
+$hoverColor  : #4C5870;
+$textColor   : #EBEDEC;
+$bgColor     : #3D3D3B;
+
+
+body {
+    font-family: 'Verdana', sans-serif;
+    line-height: 1;
+    background: $bgColor;
+    padding: 20px;
+    color: $textColor;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.wrap {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.accordion {
+    font-size: 18px;
+    &__section {
+        background: $mainColor;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    &__titlebox {
+        display: flex;
+        padding: 9px 14px 10px;
+        line-height: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        will-change: transform;
+        transition: .3s;
+        &:hover {
+            background: $hoverColor;
+        }
+    }
+    &__icon {
+        min-width: 18px;
+        height: 18px;
+        position: relative;
+        .plus,
+        .minus {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            will-change: transform;
+            transition: .3s;
+        }
+        .plus {
+            opacity: 1;
+            visibility: visible;
+        }
+        .minus {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    &__title {
+        margin-left: 18px;
+    }
+    &__content {
+        padding: 20px 50px;
+        display: none;
+        @media (max-width: 768px) {
+            padding: 20px 20px 20px 53px;
+        }
+    }
+    &__titlebox_active {
+        background: $hoverColor;
+        .plus {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .minus {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+p {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 20px;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
