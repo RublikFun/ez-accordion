@@ -1,4 +1,4 @@
-# Show/Hide Text - jQuery plugin
+# EZ Accordion - jQuery plugin
 
 Simple jQuery plugin - EZ Accordion.
 

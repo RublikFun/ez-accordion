@@ -73,7 +73,7 @@ var gulp         = require('gulp'),
             errorHandler: onError
         }))
         .pipe(changed(imgDst))
-        //.pipe(imagemin())
+        .pipe(imagemin())
         .pipe(gulp.dest(imgDst))
         .pipe(notify({ message: 'Images task complete' }));
     });
@@ -104,8 +104,4 @@ var gulp         = require('gulp'),
 
     	// If user-developed Javascript is modified, re-run our hinter and scripts tasks
     	gulp.watch('src/js/**/*.js', ['scripts']);
-
-    	// If an image is modified, run our images task to compress images
-    	//gulp.watch('src/img/**/*', ['images']);
-
     });

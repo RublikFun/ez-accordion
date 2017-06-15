@@ -1,4 +1,4 @@
-/*------------ Custome Accordion ------------*/
+/*------------ EZ Accordion ------------*/
 function ezAccordion(sSelector) {
    var a = this;
 
